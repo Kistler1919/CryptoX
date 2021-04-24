@@ -4,7 +4,7 @@ import { FlatList } from "react-native-gesture-handler";
 import PortfolioCoin from "../../components/PortfolioCoin";
 
 import styles from "./styles";
-const image = require("../../assets/images/Saly-10.png");
+const image = require("../../../assets/images/Saly-10.png");
 
 const portfolioCoins = [
   {

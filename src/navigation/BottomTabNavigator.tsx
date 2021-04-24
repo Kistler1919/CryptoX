@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import { BottomTabParamList} from '../types';
+import { BottomTabParamList} from '../../types';
 import HomeScreen from '../screens/HomeScreen/index';
 import PortfolioScreen from '../screens/PortfolioScreen/index';
 import MarketScreen from '../screens/MarketScreen';

@@ -1,8 +1,6 @@
 import React from "react";
-import { View, Text, Image, FlatList } from "react-native";
-import MarketCoin from "../../components/MarketCoin";
-// import { FlatList } from "react-native-gesture-handler";
-import PortfolioCoin from "../../components/PortfolioCoin";
+import { View, Text, Image } from "react-native";
+import { FlatList } from "react-native-gesture-handler";
 import UserRankingItem from "../../components/UserRankingItem";
 
 import styles from "./styles";

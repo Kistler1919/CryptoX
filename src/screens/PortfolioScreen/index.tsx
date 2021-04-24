@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { View, Text, Image, FlatList } from "react-native";
+// import { FlatList } from "react-native-gesture-handler";
 import PortfolioCoin from "../../components/PortfolioCoin";
 
 import styles from "./styles";
@@ -8,28 +8,28 @@ const image = require("../../../assets/images/Saly-10.png");
 
 const portfolioCoins = [
   {
-    id: 1,
-    name: "Virtual Dollars",
-    image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Flogos-world.net%2Fbitcoin-logo%2F&psig=AOvVaw3EPYpLF2BmvPF91t7lzLTk&ust=1614304070420000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLi1x731g-8CFQAAAAAdAAAAABAD',
-    symbol: "USD",
+    id: '1',
+    name: 'Virtual Dollars',
+    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+    symbol: 'USD',
     amount: 419.69,
-    valueUSD: 419.69,
+    valueUSD: 41969,
   },
   {
-    id: 2,
-    name: "Bitcoin",
-    image: 'abc',
-    symbol: "EUR",
+    id: '2',
+    name: 'Bitcoin',
+    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+    symbol: 'EUR',
     amount: 1.21,
-    valueUSD: 420.69,
+    valueUSD: 42069,
   },
   {
-    id: 3,
-    name: "Etherium",
-    symbol: "ETH",
-    image: 'abc',
+    id: '3',
+    name: 'Etherium',
+    symbol: 'ETH',
+    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
     amount: 1.16,
-    valueUSD: 420.69,
+    valueUSD: 42069,
   },
 ];
 
@@ -39,13 +39,12 @@ const PortfolioScreen = () => {
       <Image style={styles.image} source={image} />
       <View style={styles.balanceContainer}>
         <Text style={styles.label}>Portfolio balance</Text>
-        <Text style={styles.balance}>69.420</Text>
+        <Text style={styles.balance}>$420.69</Text>
       </View>
       <FlatList
+        style={{ width: '100%' }}
         data={portfolioCoins}
-        renderItem={({ item }) => (
-          <PortfolioCoin portfolioCoin={item} key={item.id}/>
-        )}
+        renderItem={({item}) => <PortfolioCoin portfolioCoin={item} key={item.id} />}
       />
     </View>
   );

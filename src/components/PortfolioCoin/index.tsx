@@ -5,12 +5,12 @@ import styles from './styles';
 
 export interface PortfolioCoinProps {
   portfolioCoin: {
-    image: string;
-    name: string;
-    symbol: string;
-    amount: number;
-    valueUSD: number;
-  };
+    image: string,
+    name: string,
+    symbol: string,
+    amount: number,
+    valueUSD: number,
+  }
 }
 
 const PortfolioCoin = (props: PortfolioCoinProps) => {
@@ -19,12 +19,16 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
   } = props;
   return (
     <View style={styles.root}>
-      <Image style={styles.image} source={{ uri: image }} />
-      <View>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={styles.symbol}>{symbol}</Text>
-        <Text style={styles.name}>${valueUSD}</Text>
-        <Text style={styles.name}>{symbol} {amount}</Text>
+      <View style={styles.left}>
+        <Image style={styles.image} source={{ uri: image }} />
+        <View >
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.symbol}>{symbol}</Text>
+        </View>
+      </View>
+      <View style={{ alignItems: 'flex-end' }}>
+        <Text style={styles.value}>${valueUSD}</Text>
+        <Text style={styles.symbol}>{symbol} {amount}</Text>
       </View>
     </View>
   );

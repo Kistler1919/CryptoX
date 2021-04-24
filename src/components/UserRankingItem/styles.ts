@@ -31,10 +31,11 @@ const styles = StyleSheet.create({
         color: '#6b6b6b',
         fontWeight: '700'
     },
-    // rate: {
-    //     color: 'red',
-    //     fontWeight: '700'
-    // },
+    place: {
+        fontSize: 18, 
+        fontWeight: '600',
+        width: 20,
+    },
 })
 
 export default styles;

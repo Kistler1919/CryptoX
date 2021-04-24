@@ -38,7 +38,7 @@ const ProfileScreen = () => {
         onPress={signOut}
         style={styles.button}
       >
-        <Text>Sign Out</Text>
+        <Text style={styles.buttonText}>Sign Out</Text>
       </Pressable>
     </View>
   );

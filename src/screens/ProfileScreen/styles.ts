@@ -47,11 +47,17 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 'auto',
-    color: 'white',
     padding: 15,
-    borderRadius: 15,
-    backgroundColor: '#9AA2F8',
+    margin: 10,
+    height: 50,
+    borderRadius: 25, 
+    backgroundColor: '#555a86',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
+  buttonText: {
+    color: 'white'
+}
 });
 
 export default styles;

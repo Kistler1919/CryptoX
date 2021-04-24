@@ -1,36 +1,45 @@
+import { useNavigation, useNavigationState } from "@react-navigation/core";
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
+import ChangeRate from "../PercentageChange";
 
-import styles from './styles';
+import styles from "./styles";
 
 export interface MarketCoinProps {
   marketCoin: {
-    image: string,
-    name: string,
-    symbol: string,
-    rate: number,
-    valueUSD: number,
-  }
+    image: string;
+    name: string;
+    symbol: string;
+    rate: number;
+    valueUSD: number;
+  };
 }
 
 const MarketCoin = (props: MarketCoinProps) => {
   const {
     marketCoin: { image, name, symbol, rate, valueUSD },
   } = props;
+
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.root}>
+    <Pressable style={styles.root} onPress={() => navigation.navigate('CoinDetails')}>
       <View style={styles.left}>
         <Image style={styles.image} source={{ uri: image }} />
-        <View >
+        <View>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.symbol}>{symbol}</Text>
         </View>
       </View>
-      <View style={{ alignItems: 'flex-end' }}>
+      <View style={{ alignItems: "flex-end" }}>
         <Text style={styles.value}>${valueUSD}</Text>
-        <Text style={{ color: rate > 0 ? 'blue' : 'red' }}>{ rate > 0 && '+' }{rate}</Text>
+        <ChangeRate value={rate} />
+        {/* <Text style={{ color: rate > 0 ? "blue" : "red" }}>
+          {rate > 0 && "+"}
+          {rate}
+        </Text> */}
       </View>
-    </View>
+    </Pressable>
   );
 };
 

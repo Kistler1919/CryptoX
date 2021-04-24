@@ -44,7 +44,7 @@ const PortfolioScreen = () => {
       <FlatList
         data={portfolioCoins}
         renderItem={({ item }) => (
-          <PortfolioCoin portfolioCoin={item} />
+          <PortfolioCoin portfolioCoin={item} key={item.id}/>
         )}
       />
     </View>

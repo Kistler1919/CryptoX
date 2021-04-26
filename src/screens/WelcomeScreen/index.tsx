@@ -14,8 +14,8 @@ const WelcomeScreen = () => {
     const fetchUser = async () => {
       const user = await Auth.currentAuthenticatedUser();
       if (user) {
-        console.log('User data');
-        console.log(user);
+        // console.log('User data');
+        // console.log(user);
         // navigation.navigate("Root");
         navigation.dispatch(
           CommonActions.reset({

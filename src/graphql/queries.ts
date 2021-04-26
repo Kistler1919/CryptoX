@@ -10,6 +10,17 @@ export const getUser = /* GraphQL */ `
       name
       image
       netWorth
+      portfolioCoins {
+        items {
+          id
+          amount
+          userId
+          coinId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -28,6 +39,132 @@ export const listUsers = /* GraphQL */ `
         name
         image
         netWorth
+        portfolioCoins {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getPortfolioCoin = /* GraphQL */ `
+  query GetPortfolioCoin($id: ID!) {
+    getPortfolioCoin(id: $id) {
+      id
+      amount
+      userId
+      user {
+        id
+        email
+        name
+        image
+        netWorth
+        portfolioCoins {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      coinId
+      coin {
+        id
+        cgId
+        name
+        symbol
+        image
+        current_price
+        rate24h
+        rate1D
+        rate7D
+        priceHistoryString
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listPortfolioCoins = /* GraphQL */ `
+  query ListPortfolioCoins(
+    $filter: ModelPortfolioCoinFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPortfolioCoins(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        amount
+        userId
+        user {
+          id
+          email
+          name
+          image
+          netWorth
+          createdAt
+          updatedAt
+        }
+        coinId
+        coin {
+          id
+          cgId
+          name
+          symbol
+          image
+          current_price
+          rate24h
+          rate1D
+          rate7D
+          priceHistoryString
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getCoin = /* GraphQL */ `
+  query GetCoin($id: ID!) {
+    getCoin(id: $id) {
+      id
+      cgId
+      name
+      symbol
+      image
+      current_price
+      rate24h
+      rate1D
+      rate7D
+      priceHistoryString
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listCoins = /* GraphQL */ `
+  query ListCoins(
+    $filter: ModelCoinFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCoins(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        cgId
+        name
+        symbol
+        image
+        current_price
+        rate24h
+        rate1D
+        rate7D
+        priceHistoryString
         createdAt
         updatedAt
       }

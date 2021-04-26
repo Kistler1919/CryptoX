@@ -5,7 +5,7 @@ import ChangeRate from "../PercentageChange";
 
 import styles from "./styles";
 
-export interface MarketCoinProps {
+export interface PortfolioCoinProps {
   marketCoin: {
     image: string;
     name: string;
@@ -15,7 +15,7 @@ export interface MarketCoinProps {
   };
 }
 
-const MarketCoin = (props: MarketCoinProps) => {
+const MarketCoin = (props: PortfolioCoinProps) => {
   const {
     marketCoin: { image, name, symbol, rate, valueUSD },
   } = props;

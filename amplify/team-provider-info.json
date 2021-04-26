@@ -20,7 +20,7 @@
       "function": {
         "cryptox3f22fc65PostConfirmation": {
           "deploymentBucketName": "amplify-cryptox-dev-155615-deployment",
-          "s3Key": "amplify-builds/cryptox3f22fc65PostConfirmation-3543696f385634704345-build.zip"
+          "s3Key": "amplify-builds/cryptox3f22fc65PostConfirmation-656a46587244652b5063-build.zip"
         }
       }
     }

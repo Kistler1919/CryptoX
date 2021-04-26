@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "cryptox3f22fc65",
+  "functionName": "cryptox3f22fc65PostConfirmation",
+  "resourceName": "cryptox3f22fc65PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/Users/kistler/.nvm/versions/node/v15.11.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "cryptox3f22fc65PostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}

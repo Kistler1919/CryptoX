@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "cryptox",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcryptox3f22fc65",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

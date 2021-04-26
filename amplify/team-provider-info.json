@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cryptox-dev-155615-authRole",
+      "UnauthRoleArn": "arn:aws:iam::695649948709:role/amplify-cryptox-dev-155615-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::695649948709:role/amplify-cryptox-dev-155615-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cryptox-dev-155615-deployment",
+      "UnauthRoleName": "amplify-cryptox-dev-155615-unauthRole",
+      "StackName": "amplify-cryptox-dev-155615",
+      "StackId": "arn:aws:cloudformation:us-east-1:695649948709:stack/amplify-cryptox-dev-155615/c6e3c230-a5de-11eb-8f19-125ba4d329dd",
+      "AmplifyAppId": "d38id0ue501qya"
+    },
+    "categories": {
+      "auth": {
+        "cryptox3f22fc65": {
+          "googleClientId": "389476140954-jpd6r04ebel10qd74glf4c3dug4bjpdc.apps.googleusercontent.com"
+        }
+      },
+      "function": {
+        "cryptox3f22fc65PostConfirmation": {
+          "deploymentBucketName": "amplify-cryptox-dev-155615-deployment",
+          "s3Key": "amplify-builds/cryptox3f22fc65PostConfirmation-3543696f385634704345-build.zip"
+        }
+      }
+    }
+  }
+}
